@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('./partials/meta'); %>
+  <%- include('./partials/styles'); %>
+  <title><%= title %></title>
+  <style>
+    .main-title {
+      text-transform: capitalize;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="container my-5">
+    <h1 class="main-title"><%= title %></h1>
+  </header>
+
+  <section class="container mb-5">
+    <table class="table">
+      <thead class="table-dark">
+        <tr>
+          <th>Name</th>
+          <th>Stars</th>
+          <th>Description</th>
+          <th>Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% repositories.forEach(repo => { %>
+          <tr>
+            <td><%= repo.name %></td>
+            <td><%= repo.stargazers_count %></td>
+            <td><%= repo.description %></td>
+            <td><a href="<%= repo.html_url %>" target="_blank" rel="noopener noreferrer">View on GitHub</a></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </section>
+  <%- include('./partials/scripts'); %>
+</body>
+</html>

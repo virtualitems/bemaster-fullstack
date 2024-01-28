@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('./partials/meta'); %>
+  <%- include('./partials/styles'); %>
+  <title><%= title %></title>
+</head>
+<body>
+
+  <header class="container my-5">
+    <h1 class="alert alert-info">Welcome to the App</h1>
+  </header>
+
+  <section class="container mb-5">
+    <p class="d-block mb-3">
+      Please visit the top starred github repos, starting with
+      <a href="/github/top/org/google">Google</a>
+      or
+      <a href="/github/top/org/facebook">Facebook</a>.
+    </p>
+
+    <p class="d-block">
+      You can also search for a github repo with <b>/github/top/{org|user}/{username}</b>.
+    </p>
+
+    <p class="d-block">
+      For example, my repository <a href="/github/top/user/virtualitems">Virtual Items</a>
+    </p>
+  </section>
+
+  <%- include('./partials/scripts'); %>
+</body>
+</html>

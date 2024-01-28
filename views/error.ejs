@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('./partials/meta'); %>
+  <%- include('./partials/styles'); %>
+  <title><%= title %></title>
+</head>
+<body>
+
+  <header class="container my-5">
+    <h1 class="alert alert-danger">Error</h1>
+  </header>
+
+  <section class="container mb-5">
+    <p><%= message %></p>
+  </section>
+
+  <%- include('./partials/scripts'); %>
+</body>
+</html>
